@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/formValidationScript.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a href="index.html" class="header__a">Inicio</a>
+                </li>
+                <li class="header__item">
+                    <a href="estudios.html" class="header__a">Estudios</a>
+                </li>
+                <li class="header__item">
+                    <a href="pasatiempos.html" class="header__a">Pasatiempos</a>
+                </li>
+                <li class="header__item">
+                    <a href="proyectos.html" class="header__a">Proyectos</a>
+                </li>
+                <li class="header__item">
+                    <a href="#contact__data-container" class="header__a">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main__wrapper">
+        <main class="main">
+            <div class="main__data-container" id="contact__data-container">
+                <h1>Contacto</h1>
+                <form id="form" class="main__form" >
+                    <div class="form__input">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="John Doe" required>
+                    </div>
+                    <div class="form__input">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="form__input">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" placeholder="Trabajo" required>
+                    </div>
+                    <div class="form__input">
+                        <label for="mensaje">Mensaje</label> 
+                        <textarea id="mensaje" rows="10" placeholder="Deja tu mensaje" required></textarea>     
+                    </div>
+                    <div class="form__input">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <aside class="aside">
+            <div class="aside__img-container contact-aside"></div>
+        </aside>
+    </div>
+    <footer class="footer">
+        <p class="footer__p">
+            Copyrigth 2022 - Universidad del Cauca <br><br>
+            Popayan - Cauca
+        </p>
+    </footer>
+</body>
+</html>

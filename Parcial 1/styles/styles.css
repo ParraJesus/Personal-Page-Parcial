@@ -1,0 +1,424 @@
+:root
+{
+    --font-color-1: #333;
+    --font-color-2: #444;
+    --font-color-3: #555;
+    --font-color-4: #ffffff;
+    --bg-color-1: #ffffff;
+    --bg-color-2: #D6DDE3;
+    --bg-color-3: #B6BAD4;
+    --bg-color-4: #9691A5;
+    --shadow-color-1: #000A;
+    --shadow-color-2: #0006;
+    font-size: 22px;
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color-1);
+}
+
+/*---------------------------------------------- Header ----------------------------------------------*/
+
+.header
+{
+    width: 100%;
+    min-height: 80px;
+    background-color: var(--bg-color-2);
+    box-shadow: 0 0 15px var(--shadow-color-1);
+    margin: 0;
+}
+
+.header__nav
+{
+    margin: 0;
+    width: 100%;
+}
+
+.header__list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+}
+
+.header__item
+{
+    margin: 0;
+    list-style: none;
+}
+
+.header__a{
+    font-size: 0.8rem;
+    display: inline-block;
+    width: 200px;
+    height: 80px;
+    align-content: center;
+    text-align: center;
+    background-color: var(--bg-color-3);
+    color: var(--font-color-1);
+    text-decoration: none;
+}
+
+.header__a:is(:hover, :active){
+    color: var(--font-color-4);
+    background-color: var(--bg-color-4);
+}
+
+/*------------------------------------------- Main Profile -------------------------------------------*/
+
+h1, h2, h3
+{
+    margin: 0;
+    text-align: center;
+    text-wrap: pretty;
+    font-size: 1.2rem;
+    color: var(--font-color-2);
+    margin-bottom: 20px;
+}
+
+h1
+{
+    color: var(--font-color-1);
+}
+
+h2
+{
+    margin: 0;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--font-color-3);
+}
+
+h3
+{
+    font-size: 1rem;
+}
+
+.main__wrapper
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 40px;
+    margin: 40px;
+    max-width: 1224px;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.main__wrapper-one-column
+{
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.main__data-container, .aside__img-container, .aside__container
+{
+    background-color: var(--bg-color-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    box-shadow: 0 0 15px var(--shadow-color-2);
+    border-radius: 10px;
+    min-width: 500px;
+    max-width: 100vw;
+    height: 100%;
+}
+
+.main__p
+{
+    color: var(--font-color-3);
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+img
+{
+    width: 100px;
+}
+
+.slide
+{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color-4);
+}
+.main__img
+{
+    width: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.main__iframe
+{
+    width: 100%;
+    aspect-ratio: 16/9;
+    max-width: 100%;
+}
+
+.aside__img-container
+{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.aside__fleximg-container
+{
+    display: flex;
+    align-items: center;
+}
+
+.aside__gallery
+{
+    height: 100vh;
+}
+
+.index-aside
+{
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/075/917/646/large/gabriel-parra-4.jpg?1715737858");
+}
+
+.contact-aside
+{
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/053/765/784/large/gabriel-parra-1.jpg?1662995066");
+}
+
+.studies-aside
+{
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/079/665/523/large/gabriel-parra-02.jpg?1725490217");
+}
+
+.videos-aside
+{
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/053/765/784/large/gabriel-parra-1.jpg?1662995066");
+}
+
+.main__form
+{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.form__input, .form__input button
+{
+    padding: 10px 0;
+    font-size: 0.8rem;
+    color: var(--font-color-3);
+}
+
+.form__input button
+{
+    background-color: var(--bg-color-3);
+    color: var(--font-color-2);
+    width: 100%;
+    border: none;
+}
+
+.form__input button:hover
+{
+    background-color: var(--bg-color-4);
+    color: var(--font-color-4);
+}
+
+.form__input button:active
+{
+    opacity: .7;
+}
+
+input, textarea
+{
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    background-color: var(--bg-color-1);
+    color: var(--font-color-3);
+}
+
+textarea
+{
+    font-family: sans-serif;
+    min-width: 100%;
+    min-height: 100px;
+    resize: none;
+}
+
+.main__table, tr,th,td,tbody,thead
+{
+    padding: 0;
+    border: 1px solid var(--bg-color-4);
+    color: var(--font-color-3);
+}
+
+.container__gallery
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(1fr, 250px));
+    grid-template-rows: repeat(6, minmax(1fr, 250px));
+    grid-auto-flow: dense;
+    gap: 5px;
+    background-color: transparent;
+    overflow: scroll;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+.gallery__item
+{
+    min-height: 500px;
+    background-color: var(--bg-color-4);
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/050/073/152/large/jesus-parra-conehex.jpg?1654005521");
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery__item:nth-child(3n)
+{
+    grid-column: span 2;
+}
+
+.gallery__item:first-child
+{
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/050/072/717/large/jesus-parra-buzo2.jpg?1654004616");
+}
+
+.gallery__item:nth-child(3)
+{
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/050/072/641/large/jesus-parra-landscape.jpg?1654004454");
+}
+
+.gallery__item:nth-child(4)
+{
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/050/073/022/large/jesus-parra-pez-binocular.jpg?1654005149");
+}
+
+.gallery__item:nth-child(5)
+{
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/050/132/535/large/gabriel-parra-finn.jpg?1654122686");
+}
+
+.gallery__item:nth-child(6)
+{
+    background-position: right;
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/050/073/525/large/gabriel-parra-food-truck-7.jpg?1654006090");
+}
+
+.gallery__item:nth-child(7)
+{
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/050/073/968/large/gabriel-parra-pixelart13.jpg?1654006741");
+}
+
+.gallery__item:nth-child(8)
+{
+    background-position: top;
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/068/635/408/large/gabriel-parra-2.jpg?1698286993");
+}
+
+.gallery__item:last-child
+{
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/050/073/911/large/gabriel-parra-pixelart16.jpg?1654006688");
+}
+
+.projects_ul
+{
+    list-style: none;
+    text-wrap: pretty;
+}
+
+.project_ul
+{
+    margin: 20px;
+    text-wrap:pretty;
+}
+
+.projects_item
+{
+    color: var(--font-color-3);
+    margin: 20px;
+}
+
+.projects_item a
+{
+    color: #937bdd;
+    text-decoration: none;
+}
+
+.projects_item a:hover
+{
+    text-decoration: underline;
+}
+
+/*---------------------------------------------- Footer ----------------------------------------------*/
+
+.footer
+{
+    width: 100%;
+    height: 200px;
+    font-size: 0.8rem;
+    color: var(--font-color-3);
+    background-color: var(--bg-color-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px var(--shadow-color-1);
+}
+
+.footer__p
+{
+    text-align: center;
+}
+
+/*------------------------------------------- Media Queries --------------------------------------------*/
+
+@media screen and (max-width: 1080px)
+{
+    .main__wrapper
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main__data-container, .aside__img-container, .aside__container
+    {
+        min-width: auto;
+        min-height: 500px;
+    }
+    .header__list
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container__gallery
+    {
+        grid-template-columns: minmax(1fr, 250px);
+    }
+    .gallery__item:nth-child(3n)
+    {
+        grid-column: 1;
+    }
+    .gallery__item
+    {
+        min-height: 200px;
+    }
+    .aside__gallery
+    {
+        height: 50vh;
+    }
+}
