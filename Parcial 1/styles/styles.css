@@ -67,6 +67,7 @@ body
     padding: 0;
     display: flex;
     justify-content: start;
+    align-items: start;
 }
 
 .header__item
@@ -92,7 +93,7 @@ body
     background-color: var(--bg-color-light-4);
 }
 
-.header button
+.header__nav button
 {
     font-size: 0.8rem !important;
     width: 200px;
@@ -102,6 +103,27 @@ body
     background-color: var(--bg-color-light-3);
     color: var(--font-color-light-1);
     border: none;
+    cursor: pointer;
+}
+
+.menuButton
+{
+    display: none;
+}
+
+/* Cuando la clase 'visible' está presente, se muestra el menú */
+.header__list.visible {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container
+{
+    display: flex;
+    justify-content: center;
 }
 
 /*------------------------------------------- Main Profile -------------------------------------------*/
@@ -370,12 +392,14 @@ textarea
 {
     list-style: none;
     text-wrap: pretty;
+    font-size: 0.8rem;
 }
 
 .project_ul
 {
     margin: 20px;
     text-wrap:pretty;
+    font-size: 0.8rem;
 }
 
 .projects_item
@@ -416,7 +440,6 @@ textarea
 }
 
 /*------------------------------------------- Media Queries --------------------------------------------*/
-
 @media screen and (max-width: 1080px)
 {
     .main__wrapper
@@ -427,12 +450,6 @@ textarea
     {
         min-width: auto;
         min-height: 500px;
-    }
-    .header__list
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
     .container__gallery
     {
@@ -450,6 +467,15 @@ textarea
     {
         height: 50vh;
     }
+    .header__list
+    {
+        display: none;
+        
+    }
+    .menuButton
+    {
+        display: block;
+    }
 }
 
 /*------------------------------------------- Dark Mode Section --------------------------------------------*/
@@ -459,14 +485,12 @@ body.dark-mode {
     background-color: var(--bg-color-dark-1);
 }
 
-/* Header */
 body.dark-mode .header {
     background-color: var(--bg-color-dark-2);
     box-shadow: 0 0 15px var(--shadow-color-1);
 }
 
-/* Header Links */
-body.dark-mode .header__a, .header button{
+body.dark-mode .header__a{
     background-color: var(--bg-color-dark-3);
     color: var(--font-color-dark-1);
 }
@@ -478,8 +502,8 @@ body.dark-mode .header__a:is(:hover, :active) {
 
 body.dark-mode .header button
 {
-    background-color: var(--bg-color-light-3);
-    color: var(--font-color-light-1);
+    background-color: var(--bg-color-dark-3);
+    color: var(--font-color-dark-2);
 }
 
 /* Main Titles */
@@ -541,6 +565,10 @@ body.dark-mode .projects_item a
     text-decoration: none;
 }
 
+body.dark-mode .projects_item a:hover
+{
+    text-decoration: underline;
+}
 
 /* Table */
 body.dark-mode .main__table, 

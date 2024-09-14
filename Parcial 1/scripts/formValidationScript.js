@@ -1,7 +1,7 @@
 const form = document.getElementById("form");
 const name = document.getElementById("nombre");
 const email = document.getElementById("correo");
-const subject = document.getElementById("asunto");
+const tel = document.getElementById("tel");
 const message = document.getElementById("mensaje");
 
 form.addEventListener("submit", (event) => {
@@ -39,14 +39,14 @@ function validateForm() {
     {
         setSuccessFor(email);
     }
-    if (subject.value.trim() === "") 
-    {
-        setErrorFor(subject, "El asunto es obligatorio");
+    if (tel.value.trim() === "") {
+        setErrorFor(tel, "El teléfono es obligatorio");
         isValid = false;
-    } 
-    else
-    {
-        setSuccessFor(subject);
+    } else if (!isColombianPhone(tel.value.trim())) {
+        setErrorFor(tel, "El teléfono no es válido para Colombia");
+        isValid = false;
+    } else {
+        setSuccessFor(tel);
     }
     if (message.value.trim() === "")
     {
@@ -62,20 +62,22 @@ function validateForm() {
 
 function setErrorFor(input, message) 
 {
-    const formControl = input.parentNode;
-    const errorMessage = formControl.querySelector(".error-message");
-    formControl.className = "form-control error";
-    errorMessage.innerText = message;
+    
+    alert(input.name + " " + message);
 }
 
 function setSuccessFor(input) 
 {
     const formControl = input.parentNode;
-    formControl.className = "form-control success";
 }
 
 function isEmail(email) 
 {
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(String(email).toLowerCase());
+}
+
+function isColombianPhone(phone) {
+    const regex = /^(3\d{9}|\d{7,10})$/;
+    return regex.test(phone.trim());
 }

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/formValidationScript.js"></script>
 </head>
 <body>
     <header class="header">
@@ -29,6 +28,10 @@
                 <button id="toggleButton">Activar Modo Oscuro</button>
                 <script src="scripts/darkModeScript.js"></script>
             </ul>
+            <div class="button-container">
+                <button id="toggleMenuButton" class="menuButton">&#9776;</button>
+                <script src="scripts/headerToggleScript.js"></script>
+            </div>
         </nav>
     </header>
     <div class="main__wrapper">
@@ -45,8 +48,8 @@
                         <input type="email" id="correo" placeholder="example@gmail.com" required>
                     </div>
                     <div class="form__input">
-                        <label for="asunto">Asunto</label>
-                        <input type="text" id="asunto" placeholder="Trabajo" required>
+                        <label for="tel">Telefono</label>
+                        <input type="tel" id="tel" placeholder="3170000000" required>
                     </div>
                     <div class="form__input">
                         <label for="mensaje">Mensaje</label> 
@@ -56,6 +59,7 @@
                         <button type="submit">Enviar</button>
                     </div>
                 </form>
+                <script src="scripts/formValidationScript.js"></script>
             </div>
         </main>
         <aside class="aside">

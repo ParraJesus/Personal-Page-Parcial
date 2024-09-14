@@ -25,15 +25,19 @@
                 <li class="header__item">
                     <a href="contacto.html" class="header__a">Contacto</a>
                 </li>
-                <button id="toggleButton">Activar Modo Oscuro</button>
+                <button id="toggleButton" class="darkmodeButton">Activar Modo Oscuro</button>
                 <script src="scripts/darkModeScript.js"></script>
             </ul>
+            <div class="button-container">
+                <button id="toggleMenuButton" class="menuButton">&#9776;</button>
+                <script src="scripts/headerToggleScript.js"></script>
+            </div>
         </nav>
     </header>
     <div class="main__wrapper">
         <main class="main">
             <div class="main__data-container" id="index__data-container">
-                <img src="assets/imagen.jpg" alt="imagen-pfp.jpg" class="main__img">
+                <img src="assets/imagen.jpg" alt="imagen-pfp.jpg" class="main__img" title="Foto de perfil de Jesus Parra">
                 <h1>Jesús Gabriel Parra Dugarte</h1>
                 <p class="main__p">
                     Mi nombre se puede leer en el título, nací el 19 de diciembre de 2003.
@@ -42,7 +46,7 @@
             </div>
         </main>
         <aside class="aside">
-            <div class="aside__img-container index-aside"></div>
+            <div class="aside__img-container index-aside" title="Ilustración de una rana con traje"></div>
         </aside>
     </div>
     <footer class="footer">
