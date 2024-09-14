@@ -1,13 +1,28 @@
 :root
 {
-    --font-color-1: #333;
-    --font-color-2: #444;
-    --font-color-3: #555;
-    --font-color-4: #ffffff;
-    --bg-color-1: #ffffff;
-    --bg-color-2: #D6DDE3;
-    --bg-color-3: #B6BAD4;
-    --bg-color-4: #9691A5;
+    /*Colores modo claro*/
+    --font-color-light-1: #333;
+    --font-color-Light-2: #444;
+    --font-color-light-3: #555;
+    --font-color-light-4: #ffffff;
+    --font-color-light-5: #937bdd;
+    --bg-color-light-1: #ffffff;
+    --bg-color-light-2: #D6DDE3;
+    --bg-color-light-3: #B6BAD4;
+    --bg-color-light-4: #9691A5;
+
+    /*Colores modo oscuro*/
+    --font-color-dark-1: #fff;
+    --font-color-dark-2: #ddd;
+    --font-color-dark-3: #ccc;
+    --font-color-dark-4: #fff;
+    --bg-color-dark-1: #2B2B2B;
+    --bg-color-dark-2: #353739;
+    --bg-color-dark-3: #3A4044;
+    --bg-color-dark-4: #333333;
+    --font-color-dark-5: #836fbe;
+
+    /*General*/
     --shadow-color-1: #000A;
     --shadow-color-2: #0006;
     font-size: 22px;
@@ -16,6 +31,7 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
+    transition: color 0.5s, background-color 0.5s, border-color 0.5s;
 }
 
 body
@@ -26,7 +42,7 @@ body
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-light-1);
 }
 
 /*---------------------------------------------- Header ----------------------------------------------*/
@@ -35,7 +51,7 @@ body
 {
     width: 100%;
     min-height: 80px;
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-color-light-2);
     box-shadow: 0 0 15px var(--shadow-color-1);
     margin: 0;
 }
@@ -60,20 +76,32 @@ body
 }
 
 .header__a{
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
     display: inline-block;
     width: 200px;
     height: 80px;
     align-content: center;
     text-align: center;
-    background-color: var(--bg-color-3);
-    color: var(--font-color-1);
+    background-color: var(--bg-color-light-3);
+    color: var(--font-color-light-1);
     text-decoration: none;
 }
 
 .header__a:is(:hover, :active){
-    color: var(--font-color-4);
-    background-color: var(--bg-color-4);
+    color: var(--font-color-light-4);
+    background-color: var(--bg-color-light-4);
+}
+
+.header button
+{
+    font-size: 0.8rem !important;
+    width: 200px;
+    height: 80px;
+    align-content: center;
+    text-align: center;
+    background-color: var(--bg-color-light-3);
+    color: var(--font-color-light-1);
+    border: none;
 }
 
 /*------------------------------------------- Main Profile -------------------------------------------*/
@@ -83,14 +111,15 @@ h1, h2, h3
     margin: 0;
     text-align: center;
     text-wrap: pretty;
-    font-size: 1.2rem;
-    color: var(--font-color-2);
+    font-size: 1.2rem !important;
+    color: var(--font-color-Light-2);
     margin-bottom: 20px;
 }
 
 h1
 {
-    color: var(--font-color-1);
+    color: var(--font-color-light-1);
+    font-size: 1.2rem !important;
 }
 
 h2
@@ -98,7 +127,7 @@ h2
     margin: 0;
     font-size: 1.1rem;
     margin-bottom: 20px;
-    color: var(--font-color-3);
+    color: var(--font-color-light-3);
 }
 
 h3
@@ -126,7 +155,7 @@ h3
 
 .main__data-container, .aside__img-container, .aside__container
 {
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-color-light-2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +169,7 @@ h3
 
 .main__p
 {
-    color: var(--font-color-3);
+    color: var(--font-color-light-3);
     font-size: 0.8rem;
     text-align: justify;
 }
@@ -154,8 +183,8 @@ img
 {
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color-4);
 }
+
 .main__img
 {
     width: 250px;
@@ -219,21 +248,21 @@ img
 {
     padding: 10px 0;
     font-size: 0.8rem;
-    color: var(--font-color-3);
+    color: var(--font-color-light-3);
 }
 
 .form__input button
 {
-    background-color: var(--bg-color-3);
-    color: var(--font-color-2);
+    background-color: var(--bg-color-light-3);
+    color: var(--font-color-Light-2);
     width: 100%;
     border: none;
 }
 
 .form__input button:hover
 {
-    background-color: var(--bg-color-4);
-    color: var(--font-color-4);
+    background-color: var(--bg-color-light-4);
+    color: var(--font-color-light-4);
 }
 
 .form__input button:active
@@ -247,8 +276,8 @@ input, textarea
     box-sizing: border-box;
     padding: 10px;
     border: none;
-    background-color: var(--bg-color-1);
-    color: var(--font-color-3);
+    background-color: var(--bg-color-light-1);
+    color: var(--font-color-light-3);
 }
 
 textarea
@@ -262,8 +291,8 @@ textarea
 .main__table, tr,th,td,tbody,thead
 {
     padding: 0;
-    border: 1px solid var(--bg-color-4);
-    color: var(--font-color-3);
+    border: 1px solid var(--bg-color-light-4);
+    color: var(--font-color-light-3);
 }
 
 .container__gallery
@@ -284,7 +313,7 @@ textarea
 .gallery__item
 {
     min-height: 500px;
-    background-color: var(--bg-color-4);
+    background-color: var(--bg-color-light-4);
     background-image: url("https://cdna.artstation.com/p/assets/images/images/050/073/152/large/jesus-parra-conehex.jpg?1654005521");
     background-size: cover;
     background-position: center;
@@ -351,13 +380,13 @@ textarea
 
 .projects_item
 {
-    color: var(--font-color-3);
+    color: var(--font-color-light-3);
     margin: 20px;
 }
 
 .projects_item a
 {
-    color: #937bdd;
+    color: var(--font-color-light-5);
     text-decoration: none;
 }
 
@@ -373,8 +402,8 @@ textarea
     width: 100%;
     height: 200px;
     font-size: 0.8rem;
-    color: var(--font-color-3);
-    background-color: var(--bg-color-3);
+    color: var(--font-color-light-3);
+    background-color: var(--bg-color-light-3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -421,4 +450,116 @@ textarea
     {
         height: 50vh;
     }
+}
+
+/*------------------------------------------- Dark Mode Section --------------------------------------------*/
+
+/* Body */
+body.dark-mode {
+    background-color: var(--bg-color-dark-1);
+}
+
+/* Header */
+body.dark-mode .header {
+    background-color: var(--bg-color-dark-2);
+    box-shadow: 0 0 15px var(--shadow-color-1);
+}
+
+/* Header Links */
+body.dark-mode .header__a, .header button{
+    background-color: var(--bg-color-dark-3);
+    color: var(--font-color-dark-1);
+}
+
+body.dark-mode .header__a:is(:hover, :active) {
+    color: var(--font-color-dark-4);
+    background-color: var(--bg-color-dark-4);
+}
+
+body.dark-mode .header button
+{
+    background-color: var(--bg-color-light-3);
+    color: var(--font-color-light-1);
+}
+
+/* Main Titles */
+body.dark-mode h1 {
+    color: var(--font-color-dark-1);
+}
+
+body.dark-mode h2 {
+    color: var(--font-color-dark-3);
+}
+
+body.dark-mode h3 {
+    color: var(--font-color-dark-2);
+}
+
+/* Main Content Containers */
+body.dark-mode .main__data-container,
+body.dark-mode .aside__img-container,
+body.dark-mode .aside__container {
+    background-color: var(--bg-color-dark-2);
+}
+
+/* Paragraphs */
+body.dark-mode .main__p {
+    color: var(--font-color-dark-3);
+}
+
+/* Forms */
+body.dark-mode .form__input, 
+body.dark-mode .form__input button {
+    color: var(--font-color-dark-3);
+}
+
+body.dark-mode .form__input button {
+    background-color: var(--bg-color-dark-3);
+    color: var(--font-color-dark-2);
+}
+
+body.dark-mode .form__input button:hover {
+    background-color: var(--bg-color-dark-4);
+    color: var(--font-color-dark-4);
+}
+
+body.dark-mode input, 
+body.dark-mode textarea {
+    background-color: var(--bg-color-dark-1);
+    color: var(--font-color-dark-3);
+}
+
+body.dark-mode .projects_item
+{
+    color: var(--font-color-dark-3);
+    margin: 20px;
+}
+
+body.dark-mode .projects_item a
+{
+    color: var(--font-color-dark-5);
+    text-decoration: none;
+}
+
+
+/* Table */
+body.dark-mode .main__table, 
+body.dark-mode tr, 
+body.dark-mode th, 
+body.dark-mode td, 
+body.dark-mode tbody, 
+body.dark-mode thead {
+    border: 1px solid var(--font-color-dark-3);
+    color: var(--font-color-dark-3);
+}
+
+/* Gallery Items */
+body.dark-mode .gallery__item {
+    background-color: var(--bg-color-dark-4);
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background-color: var(--bg-color-dark-3);
+    color: var(--font-color-dark-3);
 }
